@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
 :root{
-    --primary-color:purple
+    --primary-color:purple;
     ;
 }
 body{
@@ -28,3 +28,13 @@ body{
 .link{
     text-decoration: none;
     padding: 0.5rem 1rem;}
+    hr{
+        margin:1rem 0rem;
+    }
+.list-non-bullet{
+    list-style: none;
+}
+.online{
+    display:inline;
+    margin: 0rem 2rem;
+}
