@@ -38,3 +38,13 @@ body{
     display:inline;
     margin: 0rem 2rem;
 }
+.navigation-coantainer{
+    background-color: purple;
+    border-radius: 0.5rem;
+    border: 1px green;
+    color: white;
+}
+.navigation-coantainer.link{
+    display: inline;
+    color:white;
+}
