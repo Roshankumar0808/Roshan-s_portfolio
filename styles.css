@@ -1,18 +1,2 @@
-body{
-    color:red
-}
-h1{
-    color:blue
-}
-h2{
-    color:green
-}
-p{
-    color:yellow
-}
-#lib-header{
-    color:pink
-}
-.para{
-    color:purple
-}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+font-family: 'PT Sans', sans-serif;
