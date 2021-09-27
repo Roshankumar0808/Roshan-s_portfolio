@@ -1,2 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
-font-family: 'PT Sans', sans-serif;
+:root{
+    --primary-color:purple
+    ;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+.coantainer-centric{
+    max-width: 600px;
+    margin: auto;}
+.coantainer{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.link-primary{
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-color);
+    color:white;
+}
+.link-secondary{
+    background-color: green;
+    border-radius: 0.5rem;
+    border: 1px solid green;
+    color:white;
+}
+.link{
+    text-decoration: none;
+    padding: 0.5rem 1rem;}
