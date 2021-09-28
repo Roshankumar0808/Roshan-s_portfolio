@@ -10,7 +10,7 @@
 body {
     font-family: 'PT Sans', sans-serif;
     margin: 0px;
-    background-color: black;
+    background-color: #A7F3D0;
     
 }
 
@@ -211,7 +211,7 @@ hr {
 }
 .showcase-list4{
     padding: 2rem;
-    background-color: #93C5FD;
+    background-color: #60A5FA;
     font-size: 20px;
 }
 .showcase-list3{
@@ -221,7 +221,7 @@ hr {
 }
 .showcase-list2{
     padding: 2rem;
-    background-color:#D1D5DB;
+    background-color:#9CA3AF;
     font-size: 20px;
 }
 .showcase-list1{
