@@ -135,7 +135,7 @@ hr {
 .hero .hero-heading {
     text-align: center;
     padding-top: 1rem;
-    color: var(--dark-gray);
+    color: blue;
 }
 
 .hero .hero-heading .heading-inverted {
@@ -172,17 +172,23 @@ hr {
 }
 
 .footer .link {
-    color: white
+    color: white;
+    font-size: 20px;
+    
+
 }
 
 .footer .footer-header {
     font-weight: bold;
-    font-size: large;
+    /* font-size: large; */
+    font-size: 30px;
+
 }
 
 .footer ul {
-    padding-inline-start: 0px;
+    padding-inline-start: 20px;
 }
+
 
 /** projects **/
 .showcase-list {
@@ -192,4 +198,34 @@ hr {
 /** blogs **/
 .showcase-blog {
     padding-bottom: 6rem;
+}
+.showcase-list6{
+    padding: 2rem;
+    background-color: #6EE7B7;
+    font-size: 20px;
+}
+.showcase-list5{
+    padding: 2rem;
+    background-color: #FDE68A;
+    font-size: 20px;
+}
+.showcase-list4{
+    padding: 2rem;
+    background-color: #93C5FD;
+    font-size: 20px;
+}
+.showcase-list3{
+    padding: 2rem;
+    background-color: #F9A8D4;
+    font-size: 20px;
+}
+.showcase-list2{
+    padding: 2rem;
+    background-color:#D1D5DB;
+    font-size: 20px;
+}
+.showcase-list1{
+    padding: 2rem;
+    background-color: #8acffd;
+    font-size: 20px;
 }
