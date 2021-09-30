@@ -10,7 +10,24 @@
 body {
     font-family: 'PT Sans', sans-serif;
     margin: 0px;
-    background-color: #A7F3D0;
+    background:
+linear-gradient(324deg, #232927 4%,   transparent 4%) -70px 43px,
+linear-gradient( 36deg, #232927 4%,   transparent 4%) 30px 43px,
+linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 30px 43px,
+linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -70px 43px,
+linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -70px 23px,
+linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 30px 23px,
+
+linear-gradient(324deg, #232927 4%,   transparent 4%) -20px 93px,
+linear-gradient( 36deg, #232927 4%,   transparent 4%) 80px 93px,
+linear-gradient( 72deg, #e3d7bf 8.5%, transparent 8.5%) 80px 93px,
+linear-gradient(288deg, #e3d7bf 8.5%, transparent 8.5%) -20px 93px,
+linear-gradient(216deg, #e3d7bf 7.5%, transparent 7.5%) -20px 73px,
+linear-gradient(144deg, #e3d7bf 7.5%, transparent 7.5%) 80px 73px;
+background-color: #232927;
+background-size: 100px 100px;
+    
+   
     
 }
 
@@ -36,7 +53,7 @@ hr {
 
 /** links **/
 .link {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
@@ -76,7 +93,10 @@ hr {
 /** navigation **/
 
 .navigation {
-    background-color: var(--primary-color);
+    background-color: hsl(2, 57%, 40%);
+background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
     color: white;
     padding: 1rem;
     border-bottom-left-radius: 1rem;
@@ -146,7 +166,11 @@ hr {
 
 .section {
     padding: 2rem;
-    background-color: #6EE7B7;
+    background:
+    radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px) 0px 10px,
+    radial-gradient(at 100% 100%,      rgba(96, 16, 48, 0) 9px, #613 10px, rgba(96, 16, 48, 0) 11px),
+    #8a3;
+    background-size: 20px 20px;
     font-size: 20px;
 }
 
@@ -156,19 +180,39 @@ hr {
 }
 
 .ow {
-    background-color: var(--off-white);
+    background:
+radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+
+radial-gradient(circle closest-side at 60% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 43%, #b03 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+background-color:#b03;
+background-size:100px 100px;
     font-size: 20px;
 
 }
 
 /** footers **/
 
-.footer {
-    background-color: var(--primary-color);
-    padding: 4rem 1rem;
+/* .footer {
+     border-radius: 15px;
+    font-size: 30px;
+    background:
+linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+background-color:#708090;
+background-size: 64px 128px;
+    padding: 0rem 1rem;
     text-align: center;
-    color: white;
+    color: black;
     border-top-right-radius: 1rem;
+    margin-top: 6rem;
 }
 
 .footer .link {
@@ -181,13 +225,57 @@ hr {
 .footer .footer-header {
     font-weight: bold;
     /* font-size: large; */
-    font-size: 30px;
+    /* font-size: 30px; */
 
-}
+/* }
 
 .footer ul {
     padding-inline-start: 20px;
+} */ 
+ .footer {
+     /* border: brown;  */
+     border-radius: 15px;
+    font-size: 30px;
+    background:
+linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+background-color:#708090;
+background-size: 64px 128px;
+    padding: 0rem 1rem;
+    text-align: center;
+    color: black;
+    border-top-right-radius: 1rem;
+    margin-top: 0rem;
+    padding-bottom: 5pt;
 }
+
+.footer .link {
+    /* color: white; */
+    font-size: 20px;
+     
+    
+
+ }
+
+ .footer .footer-header {
+    /* border: brown; */
+    border-radius: 15px;
+    font-weight: bold;
+     font-size: large; 
+     font-size: 30px;
+    /* background-color: ;  */
+
+ } 
+
+footer ul {
+    /* border: brown; */
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: large; */
+    font-size: 50px;
+    /* background-color: chartreuse;  */
+     padding-inline-start :20px; 
+} 
 
 
 /** projects **/
