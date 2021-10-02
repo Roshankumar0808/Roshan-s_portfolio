@@ -5,21 +5,187 @@
     ;
     --off-white: #F3F4F6;
     --dark-gray: #6B7280;
+    
 }
-
 body {
     font-family: 'PT Sans', sans-serif;
     margin: 0px;
-    background-color: silver;
-background-image: linear-gradient(335deg, #b00 23px, transparent 23px),
-linear-gradient(155deg, #d00 23px, transparent 23px),
-linear-gradient(335deg, #b00 23px, transparent 23px),
-linear-gradient(155deg, #d00 23px, transparent 23px);
-background-size: 58px 58px;
-background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+    --s: 25vmin;
+    --p: calc(var(--s) / 2);
+    --c1: pink;
+    --c2: dodgerblue;
+    --c3: white;
+    --bg: var(--c3);
+    --d: 4000ms;
+    --e: cubic-bezier(0.76, 0, 0.24, 1);
+    
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+      linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+    background-size: var(--s) var(--s);
+    background-position: 
+      calc(var(--p) *  1) calc(var(--p) *  0), 
+      calc(var(--p) * -1) calc(var(--p) *  1), 
+      calc(var(--p) *  1) calc(var(--p) * -1), 
+      calc(var(--p) * -1) calc(var(--p) *  0);
+    animation: 
+      color var(--d) var(--e) infinite,
+      position var(--d) var(--e) infinite;
+  }
+  
+  @keyframes color {
+    0%, 25% {
+      --bg: var(--c3);
+    }
+    26%, 50% {
+      --bg: var(--c1);
+    }
+    51%, 75% {
+      --bg: var(--c3);
+    }
+    76%, 100% {
+      --bg: var(--c2);
+    }
+  }
+  
+  @keyframes position {
+    0% {
+      background-position: 
+        calc(var(--p) *  1) calc(var(--p) *  0), 
+        calc(var(--p) * -1) calc(var(--p) *  1), 
+        calc(var(--p) *  1) calc(var(--p) * -1), 
+        calc(var(--p) * -1) calc(var(--p) *  0);
+    }
+    25% {
+      background-position: 
+        calc(var(--p) *  1) calc(var(--p) *  4), 
+        calc(var(--p) * -1) calc(var(--p) *  5), 
+        calc(var(--p) *  1) calc(var(--p) *  3), 
+        calc(var(--p) * -1) calc(var(--p) *  4);
+    }
+    50% {
+      background-position: 
+        calc(var(--p) *  3) calc(var(--p) * 8), 
+        calc(var(--p) * -3) calc(var(--p) * 9), 
+        calc(var(--p) *  2) calc(var(--p) * 7), 
+        calc(var(--p) * -2) calc(var(--p) * 8);
+    }
+    75% {
+      background-position: 
+        calc(var(--p) *  3) calc(var(--p) * 12), 
+        calc(var(--p) * -3) calc(var(--p) * 13), 
+        calc(var(--p) *  2) calc(var(--p) * 11), 
+        calc(var(--p) * -2) calc(var(--p) * 12);
+    }
+    100% {    
+      background-position: 
+        calc(var(--p) *  5) calc(var(--p) * 16), 
+        calc(var(--p) * -5) calc(var(--p) * 17), 
+        calc(var(--p) *  5) calc(var(--p) * 15), 
+        calc(var(--p) * -5) calc(var(--p) * 16);
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    body {
+      animation: none;
+    }
+  }
+
+/* body {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0px;
+    
+        --s: 25vmin;
+        --p: calc(var(--s) / 2);
+        --c1: pink;
+        --c2: dodgerblue;
+        --c3: white;
+        --bg: var(--c3);
+        --d: 4000ms;
+        --e: cubic-bezier(0.76, 0, 0.24, 1);
+        
+        background-color: var(--bg);
+        background-image:
+          linear-gradient(45deg, var(--c1) 25%, transparent 25%),
+          linear-gradient(-45deg, var(--c1) 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, var(--c2) 75%),
+          linear-gradient(-45deg, transparent 75%, var(--c2) 75%);
+        background-size: var(--s) var(--s);
+        background-position: 
+          calc(var(--p) *  1) calc(var(--p) *  0), 
+          calc(var(--p) * -1) calc(var(--p) *  1), 
+          calc(var(--p) *  1) calc(var(--p) * -1), 
+          calc(var(--p) * -1) calc(var(--p) *  0);
+        animation: 
+          color var(--d) var(--e) infinite,
+          position var(--d) var(--e) infinite;
+      
+      
+      @keyframes color {
+        0%, 25% {
+          --bg: var(--c3);
+        }
+        26%, 50% {
+          --bg: var(--c1);
+        }
+        51%, 75% {
+          --bg: var(--c3);
+        }
+        76%, 100% {
+          --bg: var(--c2);
+        }
+      }
+      
+      @keyframes position {
+        0% {
+          background-position: 
+            calc(var(--p) *  1) calc(var(--p) *  0), 
+            calc(var(--p) * -1) calc(var(--p) *  1), 
+            calc(var(--p) *  1) calc(var(--p) * -1), 
+            calc(var(--p) * -1) calc(var(--p) *  0);
+        }
+        25% {
+          background-position: 
+            calc(var(--p) *  1) calc(var(--p) *  4), 
+            calc(var(--p) * -1) calc(var(--p) *  5), 
+            calc(var(--p) *  1) calc(var(--p) *  3), 
+            calc(var(--p) * -1) calc(var(--p) *  4);
+        }
+        50% {
+          background-position: 
+            calc(var(--p) *  3) calc(var(--p) * 8), 
+            calc(var(--p) * -3) calc(var(--p) * 9), 
+            calc(var(--p) *  2) calc(var(--p) * 7), 
+            calc(var(--p) * -2) calc(var(--p) * 8);
+        }
+        75% {
+          background-position: 
+            calc(var(--p) *  3) calc(var(--p) * 12), 
+            calc(var(--p) * -3) calc(var(--p) * 13), 
+            calc(var(--p) *  2) calc(var(--p) * 11), 
+            calc(var(--p) * -2) calc(var(--p) * 12);
+        }
+        100% {    
+          background-position: 
+            calc(var(--p) *  5) calc(var(--p) * 16), 
+            calc(var(--p) * -5) calc(var(--p) * 17), 
+            calc(var(--p) *  5) calc(var(--p) * 15), 
+            calc(var(--p) * -5) calc(var(--p) * 16);
+        }
+      }
+      
+      @media (prefers-reduced-motion) {
+        body {
+          animation: none;
+        }
+      }
    
     
-}
+} */
 
 hr {
     margin: 2rem 0rem;
@@ -108,18 +274,22 @@ hr {
 }
 
 /** navigation **/
+HTML {
+    height: 100%;
+    }
 
 .navigation {
-    background:
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
-radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
-linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
-background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
-background-color: #840b2a;
+    background: linear-gradient( 90deg,
+      rgba(255, 225, 132, .7) 50%, rgba(255,255,255, 0) 50%),
+    linear-gradient( 90deg,
+      rgba(32, 113, 120, .3) 50%, rgba(255,255,255, 0) 50%),
+    linear-gradient( 90deg,
+      rgba(255, 150, 102, .3) 50%, rgba(255,255,255, 0) 50%),
+    linear-gradient( 90deg,
+      rgba(23, 76, 79, .1) 50%, rgba(255,255,255, 0) 50%);
+  background-size: 7em 7em, 5em 5em, 3em 3em, 1em 1em;
+  background-color: #F5E9BE;
+  /* font: 10px/1.4 'Trebuchet MS', Verdana, sans-serif; */
     color: white;
     padding: 1rem;
     border-bottom-left-radius: 1rem;
@@ -140,7 +310,7 @@ background-color: #840b2a;
     text-align: center;
     font-size: 20px;
     padding: 0rem 1.5rem;
-    background-color: #065F46;
+    background-color:#34D399;
   }
   @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
@@ -187,7 +357,7 @@ background-color: #840b2a;
     text-align: center;
     font-size: 20px;
     padding: 1rem 1.5rem;
-    background-color: #065F46;
+    background-color: #34D399;
 
 }
 
@@ -228,7 +398,7 @@ background-color: #840b2a;
     text-align: center;
     font-size: 20px;
     padding: 0rem 1.5rem;
-    background-color: #065F46;
+    background-color: #34D399;
     
 }
 
