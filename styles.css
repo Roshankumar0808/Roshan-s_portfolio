@@ -291,8 +291,9 @@ HTML {
   background-color: #F5E9BE;
   /* font: 10px/1.4 'Trebuchet MS', Verdana, sans-serif; */
     color: white;
-    padding: 1rem;
+    padding: 0rem;
     border-bottom-left-radius: 1rem;
+    height:16.5rem;
 }
 .wave{
     animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
@@ -336,6 +337,15 @@ HTML {
     background-color:#9D174D;
 
 }
+.navigation .count {
+  text-align: right;
+  color: black;
+  font-size: 20px;
+  font-weight:bold;
+  
+  }
+
+
 .navigation .nav-brand1 {
     font-weight: none;
     width:40vw;
